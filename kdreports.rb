@@ -1,8 +1,8 @@
 class Kdreports < Formula
   desc "A Qt library for creating printable reports"
   homepage "https://github.com/KDAB/KDReports"
-  url "https://build.opensuse.org/source/isv:KDAB/KDReports/kdreports-1.6.0.tar.gz"
-  sha256 "b3eb98916eca6a0e9bea31546782d006f66ebb2a5df45f0e68901b13fed20908"
+  url "https://build.opensuse.org/source/isv:KDAB/KDReports/kdreports-1.7.0.tar.gz"
+  sha256 "cbaab8cd818015bf9750ca0c72b2101b7bc07bb67867125dd3cfa484782d716b"
 
   depends_on "qt"
 
