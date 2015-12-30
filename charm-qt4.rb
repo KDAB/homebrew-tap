@@ -5,7 +5,7 @@ class CharmQt4 < Formula
   sha256 "063b13eabee101445e18ea4f9088dd5b87c4e47aa022b0f0c356b8df80ae3a1a"
   head "https://github.com/KDAB/Charm.git"
 
-  depends_on "qt"
+  depends_on "qt" => "with-d-bus"
   depends_on "cmake" => :build
 
   patch :p1, :DATA

@@ -5,7 +5,7 @@ class KdsoapQt5 < Formula
   sha1 "36a8075c23f75d9ec4e3e4f58e4128f9bda06dd6"
   head "https://github.com/KDAB/KDSoap.git"
 
-  depends_on "qt5"
+  depends_on "qt5" => "with-d-bus"
 
   def install
     touch ".license.accepted"
