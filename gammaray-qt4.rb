@@ -3,6 +3,7 @@ class GammarayQt4 < Formula
   homepage "https://github.com/KDAB/GammaRay"
   url "https://github.com/KDAB/GammaRay/archive/v2.4.0.tar.gz"
   sha256 "9dd517420b132db556a328f272f83dbb2021e4c0f9ee5d3c23659c039cf48718"
+  head "https://github.com/KDAB/GammaRay.git"
 
   depends_on "qt"
   depends_on "graphviz"
