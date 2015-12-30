@@ -3,6 +3,7 @@ class CharmQt5 < Formula
   homepage "https://github.com/KDAB/Charm"
   url "https://github.com/KDAB/Charm/archive/1.10.0.tar.gz"
   sha256 "063b13eabee101445e18ea4f9088dd5b87c4e47aa022b0f0c356b8df80ae3a1a"
+  head "https://github.com/KDAB/Charm.git"
 
   depends_on "qt5"
   depends_on "cmake" => :build
