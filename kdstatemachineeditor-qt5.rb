@@ -5,7 +5,7 @@ class KdstatemachineeditorQt5 < Formula
   sha256 "ba60e9407c4d21aa8b2ae061d6281f9ded80ab806b5003b1a49367de24034d7f"
   head "https://github.com/KDAB/KDStateMachineEditor.git"
 
-  depends_on "qt5"
+  depends_on "qt5" => "with-d-bus"
   depends_on "graphviz"
   depends_on "cmake" => :build
 
