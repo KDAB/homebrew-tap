@@ -5,7 +5,7 @@ class KdreportsQt5 < Formula
   sha256 "cbaab8cd818015bf9750ca0c72b2101b7bc07bb67867125dd3cfa484782d716b"
   head "https://github.com/KDAB/KDReports.git"
 
-  depends_on "qt5"
+  depends_on "qt5" => "with-d-bus"
 
   def install
     touch ".license.accepted"
