@@ -1,18 +1,15 @@
 class KdreportsQt4 < Formula
   desc "A Qt library for creating printable reports"
   homepage "https://github.com/KDAB/KDReports"
-  url "https://build.opensuse.org/source/isv:KDAB/KDReports/kdreports-1.7.0.tar.gz"
-  sha256 "cbaab8cd818015bf9750ca0c72b2101b7bc07bb67867125dd3cfa484782d716b"
+  url "https://github.com/KDAB/KDReports/releases/download/kdreports-1.7.1/kdreports-1.7.1.tar.gz"
+  sha256 "5afc29badab3f683cf9f288a3a1db505d730b851639ab22e46e7b496c6b8c475"
   head "https://github.com/KDAB/KDReports.git"
 
   depends_on "qt" => "with-d-bus"
+  depends_on "cmake" => :build
 
   def install
-    touch ".license.accepted"
-    system "./configure.sh", "-shared",
-                          "-release",
-                          "-qmake", "/usr/local/bin/qmake",
-                          "-prefix", "#{prefix}"
+    system "cmake", ".", *std_cmake_args
     system "make"
     system "make", "install"
   end
