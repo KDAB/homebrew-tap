@@ -9,7 +9,7 @@ class GammarayQt4 < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", *std_cmake_args
+    system "cmake", "-DGAMMARAY_PROBE_ONLY_BUILD=ON", ".", *std_cmake_args
     system "make"
     system "make", "install"
   end
