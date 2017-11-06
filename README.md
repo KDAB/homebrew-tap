@@ -1,6 +1,6 @@
-#Homebrew formulas for KDAB projects
+# Homebrew formulas for KDAB projects
 
-##How do I install these formulae?
+## How do I install these formulae?
 First add this tap to your homebrew using (you only need to do this once to initialize the tap):
 
 `brew tap KDAB/tap`
