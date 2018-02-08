@@ -1,8 +1,8 @@
 class GammarayQt4 < Formula
   desc "A Qt-based tool to poke around in a Qt-application and also to manipulate the application to some extent."
   homepage "https://github.com/KDAB/GammaRay"
-  url "https://github.com/KDAB/GammaRay/archive/v2.8.2.tar.gz"
-  sha256 "0c0ca35399d5977bf4057bd5b8df3da683899638383881f36de50d1fa2754060"
+  url "https://github.com/KDAB/GammaRay/archive/v2.9.0.tar.gz"
+  sha256 "f86159c77cff4aaf22feed6fb2ee012028df179f54e0e441642115f93ffc41b5"
   head "https://github.com/KDAB/GammaRay.git"
 
   depends_on "qt" => "with-d-bus"
