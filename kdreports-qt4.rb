@@ -1,8 +1,8 @@
 class KdreportsQt4 < Formula
   desc "A Qt library for creating printable reports"
   homepage "https://github.com/KDAB/KDReports"
-  url "https://github.com/KDAB/KDReports/releases/download/kdreports-1.7.1/kdreports-1.7.1.tar.gz"
-  sha256 "5afc29badab3f683cf9f288a3a1db505d730b851639ab22e46e7b496c6b8c475"
+  url "https://github.com/KDAB/KDReports/releases/download/kdreports-1.8.0/kdreports-1.8.0.tar.gz"
+  sha256 "e3f7d547fb6b20fa08d120df241bb155f460534253fa75afa7e4696f4a39fdcc"
   head "https://github.com/KDAB/KDReports.git"
 
   depends_on "qt" => "with-d-bus"
