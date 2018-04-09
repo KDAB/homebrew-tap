@@ -1,12 +1,12 @@
 diff --git a/src/core/model/element.h b/src/core/model/element.h
-index c20ac6f..ec32cfc 100644
+index ec32cfc..c20ac6f 100644
 --- a/src/core/model/element.h
 +++ b/src/core/model/element.h
-@@ -30,7 +30,6 @@
+@@ -30,6 +30,7 @@
  
  #include <QObject>
  #include <QMetaType>
--#include <QPointF>
++#include <QPointF>
  
  QT_BEGIN_NAMESPACE
  class QPainterPath;
