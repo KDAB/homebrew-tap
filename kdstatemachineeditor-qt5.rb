@@ -9,6 +9,11 @@ class KdstatemachineeditorQt5 < Formula
   depends_on "graphviz"
   depends_on "cmake" => :build
 
+  patch do
+    url "https://raw.githubusercontent.com/KDAB/homebrew-tap/master/formula-patches/kdstatemachineeditor/qpointheader-fix.diff"
+    sha256 "cbaaf171165d86f3c90aad032cacd8ae1da1bb364407e5eb8fa2c604ca69de21"
+  end
+
   def install
     system "cmake", ".", *std_cmake_args
     system "make"
