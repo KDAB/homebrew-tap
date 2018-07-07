@@ -6,6 +6,7 @@ class CharmQt5 < Formula
   head "https://github.com/KDAB/Charm.git"
 
   depends_on "qt5" => "with-d-bus"
+  depends_on "qtkeychain"
   depends_on "cmake" => :build
 
   def install
