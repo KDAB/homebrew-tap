@@ -1,8 +1,8 @@
 class KdstatemachineeditorQt5 < Formula
   desc "A Qt-based framework for creating Qt State Machine metacode using a graphical user interface"
   homepage "https://github.com/KDAB/KDStateMachineEditor"
-  url "https://github.com/KDAB/KDStateMachineEditor/archive/v1.2.4.tar.gz"
-  sha256 "3c71d564b424b498c0f5999d5133db394ae000e774734d19e2640b28908f07b1"
+  url "https://github.com/KDAB/KDStateMachineEditor/archive/v1.2.5.tar.gz"
+  sha256 "b67d27fa5f8ef4f8596490f8569e406d21a16404dfd92f82a5e9b7b37008a5da"
   head "https://github.com/KDAB/KDStateMachineEditor.git"
 
   depends_on "qt5" => "with-d-bus"
