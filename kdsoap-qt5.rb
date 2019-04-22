@@ -8,7 +8,7 @@ class KdsoapQt5 < Formula
   depends_on "qt5" => "with-d-bus"
 
   def install
-    touch ".license.accepted"
+    system "touch", ".license.accepted"
     system "./configure.sh", "-shared",
                           "-release",
                           "-qmake", "/usr/local/opt/qt5/bin/qmake",
