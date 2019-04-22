@@ -8,6 +8,7 @@ class KdchartQt5 < Formula
   depends_on "qt5" => "with-d-bus"
 
   def install
+    system "touch", ".license.accepted"
     system "./configure.sh", "-release", "-shared"
     system "make"
     system "make", "install"
