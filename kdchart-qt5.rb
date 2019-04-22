@@ -6,10 +6,9 @@ class KdchartQt5 < Formula
   head "https://github.com/KDAB/KDChart.git"
 
   depends_on "qt5" => "with-d-bus"
-  depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", *std_cmake_args
+    system "./configure.sh", "-release", "-shared"
     system "make"
     system "make", "install"
   end
