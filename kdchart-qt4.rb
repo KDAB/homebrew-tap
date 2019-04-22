@@ -6,10 +6,13 @@ class KdchartQt4 < Formula
   head "https://github.com/KDAB/KDChart.git"
 
   depends_on "qt" => "with-d-bus"
-  depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", *std_cmake_args
+    system "touch", ".license.accepted"
+    system "./configure.sh", "-shared",
+                          "-release",
+                          "-qmake", "/usr/local/bin/qmake",
+                          "-prefix", "#{prefix}"
     system "make"
     system "make", "install"
   end

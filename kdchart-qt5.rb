@@ -9,9 +9,13 @@ class KdchartQt5 < Formula
 
   def install
     system "touch", ".license.accepted"
-    system "./configure.sh", "-release", "-shared"
+    system "./configure.sh", "-shared",
+                          "-release",
+                          "-qmake", "/usr/local/opt/qt5/bin/qmake",
+                          "-prefix", "#{prefix}"
     system "make"
     system "make", "install"
+
   end
 
   test do
