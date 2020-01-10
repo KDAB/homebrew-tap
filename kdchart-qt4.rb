@@ -1,4 +1,4 @@
-wclass KdchartQt4 < Formula
+class KdchartQt4 < Formula
   desc "A Qt library for creating business and scientific charts"
   homepage "https://github.com/KDAB/KDChart"
   url "https://github.com/KDAB/KDChart/releases/download/kdchart-2.7.0/kdchart-2.7.0.tar.gz"
