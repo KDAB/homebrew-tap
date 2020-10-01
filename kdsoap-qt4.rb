@@ -1,8 +1,8 @@
 class KdsoapQt4 < Formula
   desc "A Qt-based client-side and server-side SOAP component"
   homepage "https://github.com/KDAB/KDSoap"
-  url "https://github.com/KDAB/KDSoap/releases/download/kdsoap-1.9.0/kdsoap-1.9.0.tar.gz"
-  sha256 "e3b9626d5cb08f41a709fa35031ce17bfdd075b7387baf14ecf8a9ca10994828"
+  url "https://github.com/KDAB/KDSoap/releases/download/kdsoap-1.9.1/kdsoap-1.9.1.tar.gz"
+  sha256 "a020ea26e91a2bcdbfa7bc631870ed07be2c583ae29114cfe72a5a94e0e93d27"
   head "https://github.com/KDAB/KDSoap.git"
 
   depends_on "qt" => "with-d-bus"
