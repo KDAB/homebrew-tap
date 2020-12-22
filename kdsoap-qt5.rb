@@ -6,13 +6,10 @@ class KdsoapQt5 < Formula
   head "https://github.com/KDAB/KDSoap.git"
 
   depends_on "qt5" => "with-d-bus"
+  depends_on "cmake" => :build
 
   def install
-    system "touch", ".license.accepted"
-    system "./configure.sh", "-shared",
-                          "-release",
-                          "-qmake", "/usr/local/opt/qt5/bin/qmake",
-                          "-prefix", "#{prefix}"
+    system "cmake", ".", *std_cmake_args
     system "make"
     system "make", "install"
   end
