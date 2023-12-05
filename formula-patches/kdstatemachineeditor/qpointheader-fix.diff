@@ -3,10 +3,10 @@ index ec32cfc..c20ac6f 100644
 --- a/src/core/model/element.h
 +++ b/src/core/model/element.h
 @@ -30,6 +30,7 @@
- 
+
  #include <QObject>
  #include <QMetaType>
 +#include <QPointF>
- 
+
  QT_BEGIN_NAMESPACE
  class QPainterPath;
