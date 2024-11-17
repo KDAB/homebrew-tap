@@ -5,7 +5,7 @@ class KdchartQt6 < Formula
   sha256 "57359cb9593b5a7866b4b41d9397ca4386316559d449a57b4fe2ab491bb304e9"
   head "https://github.com/KDAB/KDChart.git"
 
-  depends_on "qt6" => "with-d-bus"
+  depends_on "qt@6" => "with-d-bus"
   depends_on "cmake" => :build
 
   def install

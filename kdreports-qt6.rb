@@ -5,7 +5,7 @@ class KdreportsQt6 < Formula
   sha256 "1e4c96564e016198fcd9d25b0047abe0a988be263239bb8d027f26b21f6f406c"
   head "https://github.com/KDAB/KDReports.git"
 
-  depends_on "qt6" => "with-d-bus"
+  depends_on "qt@6" => "with-d-bus"
   depends_on "cmake" => :build
 
   def install

@@ -5,7 +5,7 @@ class KdsingleapplicationQt5 < Formula
   sha256 "31029fffa4873e2769c555668e8edaa6bd5721edbc445bff5e66cc6af3b9ed78"
   head "https://github.com/KDAB/KDSingleApplication.git"
 
-  depends_on "qt5" => "with-d-bus"
+  depends_on "qt@5" => "with-d-bus"
   depends_on "cmake" => :build
 
   def install

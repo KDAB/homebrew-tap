@@ -5,7 +5,7 @@ class KddockwidgetsQt5 < Formula
   sha256 "cf3242b8fde8988b2661366b6a9597bcb67164074c4f31d03ec2999b475a25d7"
   head "https://github.com/KDAB/KDDockWidgets.git"
 
-  depends_on "qt5" => "with-d-bus"
+  depends_on "qt@5" => "with-d-bus"
   depends_on "cmake" => :build
 
   def install

@@ -5,7 +5,7 @@ class KdmactouchbarQt5 < Formula
   sha256 "d6ca70ab9ffbe12d247e19357c833561bb8cfe7ba1909c06962f009ee65e7a47"
   head "https://github.com/KDAB/KDMacTouchBar.git"
 
-  depends_on "qt5" => "with-d-bus"
+  depends_on "qt@5" => "with-d-bus"
   depends_on "cmake" => :build
 
   def install

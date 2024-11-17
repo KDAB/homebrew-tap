@@ -6,7 +6,7 @@ class KdstatemachineeditorQt5 < Formula
   version "2.0.0-beta1"
   head "https://github.com/KDAB/KDStateMachineEditor.git"
 
-  depends_on "qt5" => "with-d-bus"
+  depends_on "qt@5" => "with-d-bus"
   depends_on "cmake" => :build
   depends_on "bison" => :build
   depends_on "graphviz"

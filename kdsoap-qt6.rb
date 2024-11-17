@@ -5,7 +5,7 @@ class KdsoapQt6 < Formula
   sha256 "d9ef11948442197c9fa44bd6fbadc842b7280a60dfc40577af66fded637af356"
   head "https://github.com/KDAB/KDSoap.git"
 
-  depends_on "qt6" => "with-d-bus"
+  depends_on "qt@6" => "with-d-bus"
   depends_on "cmake" => :build
 
   def install
