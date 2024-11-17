@@ -8,6 +8,8 @@ class KdstatemachineeditorQt5 < Formula
 
   depends_on "qt@5" => "with-d-bus"
   depends_on "cmake" => :build
+  depends_on "ninja" => :build
+
   depends_on "bison" => :build
   depends_on "graphviz"
 
@@ -15,12 +17,12 @@ class KdstatemachineeditorQt5 < Formula
     bison_bin = "#{HOMEBREW_PREFIX}/opt/bison/bin"
     ENV["PATH"] = "#{bison_bin}:#{ENV["PATH"]}"
 
-    system "cmake", "-DWITH_INTERNAL_GRAPHVIZ=OFF", ".", *std_cmake_args
-    system "make"
-    system "make", "install"
+    system "cmake", "-G", "Ninja", "-DWITH_INTERNAL_GRAPHVIZ=OFF", ".", *std_cmake_args
+    system "ninja"
+    system "ninja", "install"
   end
 
   test do
-    system "make", "test"
+    system "ctest"
   end
 end

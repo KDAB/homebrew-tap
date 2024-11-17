@@ -7,14 +7,16 @@ class CharmQt4 < Formula
 
   depends_on "qt" => "with-d-bus"
   depends_on "cmake" => :build
+  depends_on "ninja" => :build
+
 
   def install
-    system "cmake", ".", "-DCharm_VERSION=1.10.0", *std_cmake_args
-    system "make"
-    system "make", "install"
+    system "cmake", ".", "-G", "Ninja", "-DCharm_VERSION=1.10.0", *std_cmake_args
+    system "ninja"
+    system "ninja", "install"
   end
 
   test do
-    system "make", "test"
+    system "ctest"
   end
 end

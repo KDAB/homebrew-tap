@@ -7,14 +7,16 @@ class KdsoapQt6 < Formula
 
   depends_on "qt@6" => "with-d-bus"
   depends_on "cmake" => :build
+  depends_on "ninja" => :build
+
 
   def install
-    system "cmake", ".", "-DKDSoap_QT6=True", *std_cmake_args
-    system "make"
-    system "make", "install"
+    system "cmake", ".", "-G", "Ninja", "-DKDSoap_QT6=True", *std_cmake_args
+    system "ninja"
+    system "ninja", "install"
   end
 
   test do
-    system "make", "test"
+    system "ctest"
   end
 end

@@ -7,14 +7,16 @@ class KdreportsQt4 < Formula
 
   depends_on "qt" => "with-d-bus"
   depends_on "cmake" => :build
+  depends_on "ninja" => :build
+
 
   def install
-    system "cmake", ".", *std_cmake_args
-    system "make"
-    system "make", "install"
+    system "cmake", ".", "-G", "Ninja", *std_cmake_args
+    system "ninja"
+    system "ninja", "install"
   end
 
   test do
-    system "make", "test"
+    system "ctest"
   end
 end
