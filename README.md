@@ -13,6 +13,26 @@ Then install a formula using
 brew install <formula>
 ```
 
+## Updating versions
+
+See outdated versions with:
+
+```bash
+./info.py
+```
+
+Update a version with:
+
+```bash
+./update.py kdreports-qt6.rb 2.3.0
+```
+
+Or to open a PR automatically:
+
+```bash
+./update.py kdreports-qt6.rb 2.3.0 --pr KDAB/homebrew-tap
+```
+
 ## Documentation
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew#readme).
