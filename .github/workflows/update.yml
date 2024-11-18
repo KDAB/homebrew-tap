@@ -10,8 +10,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  update:
+    runs-on: macos-15
 
     steps:
       - name: Checkout sources
