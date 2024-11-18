@@ -48,17 +48,18 @@ def get_version_in_brew(filename):
     first_line = lines[0]
     return first_line.split(' ')[3].rstrip(',')
 
-def get_latest_version_in_github(repo, strip_tag = True):
+def get_latest_version_in_github(repo):
     lines = run_command_with_output(f"gh release list --repo {repo} --limit 1").split('\n')
     # example:
     # TITLE            TYPE    TAG NAME         PUBLISHED
     # KDReports 2.3.0  Latest  kdreports-2.3.0  about 2 months ago
     version = lines[0].split('\t')[2]
+    return version
 
-    if strip_tag:
-        version = version.replace('v', '')
-        version = version.split('-')[-1]
-
+# removes v suffix and stuff like that
+def clean_version(version):
+    version = version.replace('v', '')
+    version = version.split('-')[-1]
     return version
 
 def print_current_brew_versions():
@@ -81,11 +82,14 @@ def print_outdated_packages():
 
     for filename in formulas:
         current_version = get_version_in_brew(filename)
-        github_version = get_latest_version_in_github(formulas[filename]["repo"])
+        repo = formulas[filename]["repo"]
+        github_version = get_latest_version_in_github(repo)
+        github_version_numeric = clean_version(github_version)
 
-        if current_version != github_version:
+        if current_version != github_version_numeric:
             has_outdated = True
             filename = filename.ljust(30)
+
             print(f"{filename}: {current_version} => {github_version}")
 
     if not has_outdated:
