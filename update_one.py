@@ -35,8 +35,15 @@ def get_new_url(old_url, new_tag):
     elif '/releases/download/' in old_url:
         # Example: https://github.com/KDAB/KDSingleApplication/releases/download/v1.1.0/kdsingleapplication-1.1.0.tar.gz
         pkg_name = old_url.split('/')[-1].split('-')[0]
-        pkg_version = new_tag.lstrip('v')
-        return old_url.rsplit('/', 2)[0] + '/' + pkg_name + '-' + new_tag + '/' + pkg_name + '-' + pkg_version + '.tar.gz'
+
+        if pkg_name in new_tag:
+            # KDSoap/KDReports have tags like kdreports-2.2.0, here we don't prefix package name
+            tar_filename = new_tag + '.tar.gz'
+        else:
+            pkg_version = new_tag.lstrip('v')
+            tar_filename = pkg_name + '-' + pkg_version + '.tar.gz'
+
+        return old_url.rsplit('/', 2)[0] + '/' + new_tag + '/' + tar_filename
 
 # updates the url and sha1 and returns whether the file was edited or not
 def update(filename, new_tag) -> bool:
