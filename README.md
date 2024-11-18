@@ -24,13 +24,13 @@ See outdated versions with:
 Update a version with:
 
 ```bash
-./update.py kdreports-qt6.rb 2.3.0
+./update_one.py kdreports-qt6.rb 2.3.0
 ```
 
 Or to open a PR automatically:
 
 ```bash
-./update.py kdreports-qt6.rb 2.3.0 --pr KDAB/homebrew-tap
+./update_one.py kdreports-qt6.rb 2.3.0 --pr KDAB/homebrew-tap
 ```
 
 ## Documentation
