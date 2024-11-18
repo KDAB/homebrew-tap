@@ -75,7 +75,7 @@ def create_pr(filename, remote, repo, tagname):
     run_command(f"git checkout -B {tmp_branch}")
     run_command(f"git add {filename}")
     run_command(f"git commit -m \"{commit_msg}\"")
-    run_command(f"git push {remote}")
+    run_command(f"git push {remote} {tmp_branch}")
     run_command(f"git branch --set-upstream-to={remote}/{tmp_branch}")
     run_command(f"gh pr create --title \"{commit_msg}\" -R {repo} -B master -b \"bump\"")
 
