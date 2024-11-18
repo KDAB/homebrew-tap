@@ -5,17 +5,19 @@ class GammarayQt5 < Formula
   sha256 "03d7ca7bd5eb600c9c389d0cf071960330592f1f392a783b7fec5f9eaa5df586"
   head "https://github.com/KDAB/GammaRay.git"
 
-  depends_on "qt5" => "with-d-bus"
+  depends_on "qt@5" => "with-d-bus"
   depends_on "kdstatemachineeditor-qt5"
   depends_on "cmake" => :build
+  depends_on "ninja" => :build
+
 
   def install
-    system "cmake", ".", *std_cmake_args
-    system "make"
-    system "make", "install"
+    system "cmake", ".", "-G", "Ninja", *std_cmake_args
+    system "ninja"
+    system "ninja", "install"
   end
 
   test do
-    system "make", "test"
+    system "ctest"
   end
 end

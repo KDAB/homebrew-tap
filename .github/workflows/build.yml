@@ -1,0 +1,42 @@
+# SPDX-FileCopyrightText: 2023 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.com>
+#
+# SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only
+
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: true
+      matrix:
+        os:
+          - macos-14
+          - macos-15
+
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+
+      # Cache brew packages
+      - uses: tecolicom/actions-use-homebrew-tools@v1
+        with:
+          tools: "graphviz qt@5 qt@6"
+
+      - name: Brew install
+        run: |
+          brew install --build-from-source --formula ./kdstatemachineeditor-qt5.rb
+          brew install --build-from-source --formula ./kdstatemachineeditor-qt6.rb
+          brew install --build-from-source --formula ./kdsoap-qt5.rb
+          brew install --build-from-source --formula ./kdsoap-qt6.rb
+          brew install --build-from-source --formula ./kdreports-qt5.rb
+          brew install --build-from-source --formula ./kdreports-qt6.rb
+          brew install --build-from-source --formula ./kdsingleapplication-qt5.rb
+          brew install --build-from-source --formula ./kdsingleapplication-qt6.rb
+          brew install --build-from-source --formula ./kddockwidgets-qt5.rb
+          brew install --build-from-source --formula ./kddockwidgets-qt6.rb
+          brew install --build-from-source --formula ./gammaray-qt5.rb
