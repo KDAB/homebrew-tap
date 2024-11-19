@@ -41,3 +41,5 @@ jobs:
           brew install --build-from-source --formula ./kddockwidgets-qt5.rb
           brew install --build-from-source --formula ./kddockwidgets-qt6.rb
           brew install --build-from-source --formula ./gammaray-qt5.rb
+          brew install --build-from-source --formula ./kdbindings.rb
+          brew install --build-from-source --formula ./kdutils.rb
