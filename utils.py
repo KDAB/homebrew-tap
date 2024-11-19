@@ -16,6 +16,7 @@ formulas = {
     'kdreports-qt6.rb': {"repo": "KDAB/KDReports"},
     'gammaray-qt5.rb': {"repo": "KDAB/Gammaray"},
     'kdmactouchbar-qt5.rb': {"repo": "KDAB/KDMacTouchBar"},
+    'kdbindings.rb': {"repo": "KDAB/KDBindings"},
     # 'kdstatemachineeditor-qt5.rb': {"repo": "KDAB/KDStateMachineEditor"},
     # 'kdstatemachineeditor-qt6.rb': {"repo": "KDAB/KDStateMachineEditor"},
 }
