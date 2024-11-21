@@ -33,6 +33,10 @@ Or to open a PR automatically:
 ./update_one.py kdreports-qt6.rb 2.3.0 --pr KDAB/homebrew-tap
 ```
 
+## Adding new packages
+
+Besides adding a new `<package>.rb` file also adapt `.github/workflows/build.yml` and `utils.py`.
+
 ## Documentation
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://github.com/Homebrew/homebrew/tree/master/share/doc/homebrew#readme).
