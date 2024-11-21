@@ -43,3 +43,4 @@ jobs:
           brew install --build-from-source --formula ./gammaray-qt5.rb
           brew install --build-from-source --formula ./kdbindings.rb
           brew install --build-from-source --formula ./kdutils.rb
+          brew install --build-from-source --formula ./kdalgorithms.rb
