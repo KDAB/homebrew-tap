@@ -18,7 +18,7 @@ formulas = {
     'kdmactouchbar-qt5.rb': {"repo": "KDAB/KDMacTouchBar"},
     'kdbindings.rb': {"repo": "KDAB/KDBindings"},
     'kdutils.rb': {"repo": "KDAB/KDUtils"},
-    'kdalgorithms.rb': {"repo": "KDAB/KDAlgorithms"},
+    # 'kdalgorithms.rb': {"repo": "KDAB/KDAlgorithms"},
     # 'kdstatemachineeditor-qt5.rb': {"repo": "KDAB/KDStateMachineEditor"},
     # 'kdstatemachineeditor-qt6.rb': {"repo": "KDAB/KDStateMachineEditor"},
 }
