@@ -5,6 +5,9 @@
 
 import sys, os
 
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent / "ci_release_tools" / "src"))
+
 from ci_release_tools.src.utils import *
 from brew_utils import *
 

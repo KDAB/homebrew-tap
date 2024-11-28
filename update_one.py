@@ -10,9 +10,14 @@
 # to open a PR against your test tap:
 # ./update.py kdreports-qt5.rb 2.3.0 --pr iamsergio/homebrew-tap --remote sergio
 
-import argparse, os
+import argparse, os, sys
 import hashlib
+
+from pathlib import Path
+sys.path.append(str(Path(__file__).parent / "ci_release_tools" / "src"))
+
 from ci_release_tools.src.utils import *
+from brew_utils import *
 
 # Returns the sha256 of the .tar.gz file
 def get_tarball_sha256(url):
