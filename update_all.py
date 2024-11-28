@@ -3,7 +3,10 @@
 #
 # Script called by CI to update any outdated package
 
-from utils import *
+import sys, os
+
+from ci_release_tools.src.utils import *
+from brew_utils import *
 
 outdated_packages = get_outdated_packages()
 

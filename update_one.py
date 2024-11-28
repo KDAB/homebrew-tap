@@ -12,7 +12,7 @@
 
 import argparse, os
 import hashlib
-from utils import *
+from ci_release_tools.src.utils import *
 
 # Returns the sha256 of the .tar.gz file
 def get_tarball_sha256(url):
