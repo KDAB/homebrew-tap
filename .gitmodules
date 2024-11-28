@@ -1,0 +1,3 @@
+[submodule "ci-release-tools"]
+	path = ci-release-tools
+	url = git@github.com:KDABLabs/ci-release-tools.git
