@@ -1,10 +1,9 @@
 class Kdalgorithms < Formula
   desc "Algorithm helpers - kdalgorithms"
   homepage "https://github.com/KDAB/KDAlgorithms"
-  url "https://github.com/KDAB/KDAlgorithms/archive/357844a5936186cf9042fed0ced08db1cdb92942.tar.gz"
-  sha256 "6734530b84676d402c85cf31f52631c8787037c59b9b2e515e4afe94cbe51e26"
+  url "https://github.com/KDAB/KDAlgorithms/releases/download/1.4/KDAlgorithms-1.4.tar.gz"
+  sha256 "7abce0c714e5766aaf1d62d0c8771c6fbf5266ec90fd084b3258a008bcec85d8"
   head "https://github.com/KDAB/KDAlgorithms.git"
-  version "1.3.0-beta1"
 
   depends_on "cmake" => :build
   depends_on "ninja" => :build
