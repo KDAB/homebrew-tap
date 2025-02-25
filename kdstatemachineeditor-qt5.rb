@@ -16,7 +16,7 @@ class KdstatemachineeditorQt5 < Formula
     bison_bin = "#{HOMEBREW_PREFIX}/opt/bison/bin"
     ENV["PATH"] = "#{bison_bin}:#{ENV["PATH"]}"
 
-    system "cmake", "-G", "Ninja", "-DKDSME_INTERNAL_GRAPHVIZ=OFF", ".", *std_cmake_args
+    system "cmake", "-G", "Ninja", "-DBUILD_QT6=OFF", "-DKDSME_INTERNAL_GRAPHVIZ=OFF", ".", *std_cmake_args
     system "ninja"
     system "ninja", "install"
   end

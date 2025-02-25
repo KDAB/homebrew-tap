@@ -11,7 +11,7 @@ class KdsingleapplicationQt5 < Formula
 
 
   def install
-    system "cmake", ".", "-G", "Ninja", *std_cmake_args
+    system "cmake", ".", "-G", "Ninja", "-DKDSingleApplication_QT6=OFF", *std_cmake_args
     system "ninja"
     system "ninja", "install"
   end
