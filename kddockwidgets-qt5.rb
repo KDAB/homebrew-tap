@@ -11,7 +11,7 @@ class KddockwidgetsQt5 < Formula
 
 
   def install
-    system "cmake", ".", "-G", "Ninja", "-DKDDockWidgets_NO_SPDLOG=ON", *std_cmake_args
+    system "cmake", ".", "-G", "Ninja", "-DKDDockWidgets_NO_SPDLOG=ON", "-DKDDockWidgets_QT6=OFF", *std_cmake_args
     system "ninja"
     system "ninja", "install"
   end
