@@ -42,7 +42,13 @@ def get_version_in_brew(filename):
 
     # example: ==> kdstatemachineeditor-qt6: stable 2.0.0-beta2, HEAD
     first_line = lines[0]
-    return first_line.split(' ')[3].rstrip(',')
+    first_line_split = first_line.split(' ')
+
+    if len(first_line_split) < 4:
+        print(f"Warning: Could not parse version from '{first_line}', format is unexpected")
+        raise Exception(f"Cannot determine version from line: {first_line}")
+
+    return first_line_split[3].rstrip(',')
 
 # removes v suffix and stuff like that
 def clean_version(version):
