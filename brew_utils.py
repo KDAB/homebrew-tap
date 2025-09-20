@@ -38,6 +38,9 @@ def get_formula_filenames():
 
 # Gets the package version from an .rb file
 def get_version_in_brew(filename):
+    # no extension, otherwise "brew info" fails
+    filename = filename.rsplit('.', 1)[0]
+
     lines = run_command_with_output(f"brew info --formula {filename}").split('\n')
 
     # example: ==> kdstatemachineeditor-qt6: stable 2.0.0-beta2, HEAD
