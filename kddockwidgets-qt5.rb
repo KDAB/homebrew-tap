@@ -1,8 +1,8 @@
 class KddockwidgetsQt5 < Formula
   desc "Advanced Dock Widget Framework for Qt5"
   homepage "https://github.com/KDAB/KDDockWidgets"
-  url "https://github.com/KDAB/KDDockWidgets/releases/download/v2.2.5/kddockwidgets-2.2.5.tar.gz"
-  sha256 "1c202d03a0c7018aebcb249b09122d846b34298d88d0bc247a601f48c7513c89"
+  url "https://github.com/KDAB/KDDockWidgets/releases/download/v2.3.0/kddockwidgets-2.3.0.tar.gz"
+  sha256 "843baf9e1812c1ab82fd81d85b57cbc0d29bb43245efeb2539039780004b1056"
   head "https://github.com/KDAB/KDDockWidgets.git"
 
   depends_on "qt@5" => "with-d-bus"
