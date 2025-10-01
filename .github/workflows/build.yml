@@ -30,17 +30,18 @@ jobs:
 
       - name: Brew install
         run: |
-          brew install --build-from-source --formula ./kdstatemachineeditor-qt5.rb
-          brew install --build-from-source --formula ./kdstatemachineeditor-qt6.rb
-          brew install --build-from-source --formula ./kdsoap-qt5.rb
-          brew install --build-from-source --formula ./kdsoap-qt6.rb
-          brew install --build-from-source --formula ./kdreports-qt5.rb
-          brew install --build-from-source --formula ./kdreports-qt6.rb
-          brew install --build-from-source --formula ./kdsingleapplication-qt5.rb
-          brew install --build-from-source --formula ./kdsingleapplication-qt6.rb
-          brew install --build-from-source --formula ./kddockwidgets-qt5.rb
-          brew install --build-from-source --formula ./kddockwidgets-qt6.rb
-          brew install --build-from-source --formula ./gammaray-qt5.rb
-          brew install --build-from-source --formula ./kdbindings.rb
-          brew install --build-from-source --formula ./kdutils.rb
-          brew install --build-from-source --formula ./kdalgorithms.rb
+          brew tap kdab/tap_testing ${PWD}
+          brew reinstall --build-from-source kdab/tap_testing/kdstatemachineeditor-qt5
+          brew reinstall --build-from-source kdab/tap_testing/kdstatemachineeditor-qt6
+          brew reinstall --build-from-source kdab/tap_testing/kdsoap-qt5
+          brew reinstall --build-from-source kdab/tap_testing/kdsoap-qt6
+          brew reinstall --build-from-source kdab/tap_testing/kdreports-qt5
+          brew reinstall --build-from-source kdab/tap_testing/kdreports-qt6
+          brew reinstall --build-from-source kdab/tap_testing/kdsingleapplication-qt5
+          brew reinstall --build-from-source kdab/tap_testing/kdsingleapplication-qt6
+          brew reinstall --build-from-source kdab/tap_testing/kddockwidgets-qt5
+          brew reinstall --build-from-source kdab/tap_testing/kddockwidgets-qt6
+          brew reinstall --build-from-source kdab/tap_testing/gammaray-qt5
+          brew reinstall --build-from-source kdab/tap_testing/kdbindings
+          brew reinstall --build-from-source kdab/tap_testing/kdutils
+          brew reinstall --build-from-source kdab/tap_testing/kdalgorithms
