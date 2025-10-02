@@ -38,6 +38,7 @@ def print_outdated_packages():
     if not has_outdated:
         print("No outdated packages found")
 
-#print_latest_github_versions()
-#print_current_brew_versions()
+
+# print_latest_github_versions()
+# print_current_brew_versions()
 print_outdated_packages()
