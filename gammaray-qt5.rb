@@ -6,7 +6,6 @@ class GammarayQt5 < Formula
   head "https://github.com/KDAB/GammaRay.git"
 
   depends_on "qt@5" => "with-d-bus"
-  depends_on "kdstatemachineeditor-qt5"
   depends_on "cmake" => :build
   depends_on "ninja" => :build
 
