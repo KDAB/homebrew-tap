@@ -32,8 +32,9 @@ def main():
     if "--print-outdated-only" in args:
         for package in outdated_packages:
             filename = package[0]
+            current_version = package[1]
             new_tag = package[2]
-            print(f"{filename} -> {new_tag}")
+            print(f"{filename}: current={current_version} new={new_tag}")
         sys.exit(0)
 
     for package in outdated_packages:
