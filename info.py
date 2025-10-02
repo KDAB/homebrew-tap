@@ -7,6 +7,7 @@
 import sys
 from brew_utils import *
 
+
 def print_current_brew_versions():
     print("\nCurrent Homebrew versions:")
     for filename in get_formula_filenames():
@@ -14,12 +15,14 @@ def print_current_brew_versions():
         filename = filename.ljust(30)
         print(f"{filename}: {version}")
 
+
 def print_latest_github_versions():
     print("\nLatest Github versions:")
     for repo in repos():
-        version = get_latest_release_tag_in_github(repo)
+        version = get_latest_release_tag_in_github(repo, ".", "")
         repo = repo.ljust(30)
         print(f"{repo}: {version}")
+
 
 def print_outdated_packages():
     outdated_packages = get_outdated_packages()

@@ -88,8 +88,20 @@ def get_outdated_packages():
         for filename in filenames:
             current_version = get_version_in_brew(filename)
             repo = f"KDAB/{project_name}"
-            github_version = get_latest_release_tag_in_github(repo)
+            github_version = get_latest_release_tag_in_github(repo, ".", "")
             github_version_numeric = clean_version(github_version)
+
+            if "last_version_supporting_qt5" in project_data:
+                # Compare last_version_supporting_qt5 (X.Y) with github_version (X.Y.Z)
+                last_qt5_version = project_data["last_version_supporting_qt5"]
+                github_version_parts = github_version_numeric.split(".")
+                github_version_xy = ".".join(github_version_parts[:2])
+
+                def version_tuple(v):
+                    return tuple(map(int, v.split(".")))
+
+                if version_tuple(github_version_xy) > version_tuple(last_qt5_version):
+                    continue
 
             # print(f"testing {repo} {current_version} {github_version_numeric}")
             if current_version != github_version_numeric:
