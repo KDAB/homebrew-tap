@@ -19,6 +19,9 @@ jobs:
         with:
           submodules: true
 
+      - name: Install Python dependencies
+        run: pip3 install packaging
+
       - name: Update
         run: |
           brew tap kdab/tap_testing ${PWD}
