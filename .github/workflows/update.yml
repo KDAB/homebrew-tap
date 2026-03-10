@@ -20,6 +20,8 @@ jobs:
           submodules: true
 
       - name: Update
-        run: ./update_all.py
+        run: |
+          brew tap kdab/tap_testing ${PWD}
+          ./update_all.py
         env:
           GH_TOKEN: ${{ github.token }}
