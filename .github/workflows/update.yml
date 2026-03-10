@@ -20,7 +20,7 @@ jobs:
           submodules: true
 
       - name: Install Python dependencies
-        run: pip3 install packaging
+        run: pip3 install packaging --break-system-packages
 
       - name: Update
         run: |
