@@ -110,7 +110,7 @@ def get_outdated_packages():
                 if version_tuple(github_version_xy) > version_tuple(last_qt5_version):
                     continue
 
-            # print(f"testing {repo} {current_version} {github_version_numeric}")
+            print(f"{filename}: tap={current_version} github={github_version_numeric}")
             if current_version != github_version_numeric:
                 packages.append((filename, current_version, github_version))
 
