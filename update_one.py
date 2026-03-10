@@ -72,9 +72,7 @@ def update(filename, new_tag) -> bool:
 # opens a pull request against filename
 def create_pr(filename, remote, repo, tagname):
 
-    is_logged_in = run_command("gh auth status", fatal=False)
-    if not is_logged_in:
-        exit_because("Login to gh first")
+    ensure_gh_logged_in()
 
     has_changes = os.system(f'git diff --quiet {filename}') != 0
     if not has_changes:

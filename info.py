@@ -41,4 +41,5 @@ def print_outdated_packages():
 
 # print_latest_github_versions()
 # print_current_brew_versions()
+ensure_gh_logged_in()
 print_outdated_packages()

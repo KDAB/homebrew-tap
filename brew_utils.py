@@ -7,7 +7,12 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).parent / "ci_release_tools" / "src"))
 from ci_release_tools.src.utils import *
 from ci_release_tools.src.gh_utils import *
-from brew_utils import *
+
+
+def ensure_gh_logged_in():
+    is_logged_in = run_command("gh auth status", fatal=False)
+    if not is_logged_in:
+        exit_because("Login to gh first")
 
 
 def get_projects():
