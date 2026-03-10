@@ -112,7 +112,7 @@ def get_outdated_packages():
                 def version_tuple(v):
                     return tuple(map(int, v.split(".")))
 
-                if version_tuple(github_version_xy) > version_tuple(last_qt5_version):
+                if "qt5" in filename and version_tuple(github_version_xy) > version_tuple(last_qt5_version):
                     continue
 
             print(f"{filename}: tap={current_version} github={github_version_numeric}")
