@@ -1,8 +1,8 @@
 class KdsingleapplicationQt5 < Formula
   desc "Helper class for Qt5 single-instance policy applications"
   homepage "https://github.com/KDAB/KDSingleApplication"
-  url "https://github.com/KDAB/KDSingleApplication/releases/download/v1.2.0/kdsingleapplication-1.2.0.tar.gz"
-  sha256 "ff4ae6a4620beed1cdb3e6a9b78a17d7d1dae7139c3d4746d4856b7547d42c38"
+  url "https://github.com/KDAB/KDSingleApplication/releases/download/v1.2.1/kdsingleapplication-1.2.1.tar.gz"
+  sha256 "e3254ce9dc5ecf6d61ef83264bc61d486a307f0e3c9ed1bb2176f068cdbcbe09"
   head "https://github.com/KDAB/KDSingleApplication.git"
 
   depends_on "qt@5" => "with-d-bus"
