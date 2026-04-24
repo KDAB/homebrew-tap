@@ -85,6 +85,14 @@ def create_pr(filename, remote, repo, tagname):
     run_command(f"git checkout -B {tmp_branch}")
     run_command(f"git add {filename}")
     run_command(f"git commit -m \"{commit_msg}\"")
+    remote_branch_exists = run_command(
+        f"git ls-remote --exit-code --heads {remote} {tmp_branch}", fatal=False
+    )
+    if remote_branch_exists:
+        print(
+            f"Warning: remote branch {remote}/{tmp_branch} already exists; "
+            "the upcoming push may fail because an old branch already exists."
+        )
     run_command(f"git push {remote} {tmp_branch}")
     run_command(f"git branch --set-upstream-to={remote}/{tmp_branch}")
     run_command(f"gh pr create --title \"{commit_msg}\" -R {repo} -B master -b \"bump\"")
