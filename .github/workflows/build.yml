@@ -27,21 +27,16 @@ jobs:
       # Cache brew packages
       - uses: tecolicom/actions-use-homebrew-tools@v1
         with:
-          tools: "graphviz qt@5 qt@6"
+          tools: "graphviz qt@6"
 
       - name: Brew install
         run: |
           brew tap kdab/tap_testing ${PWD}
           brew reinstall --build-from-source kdab/tap_testing/kdstatemachineeditor-qt6
-          brew reinstall --build-from-source kdab/tap_testing/kdsoap-qt5
           brew reinstall --build-from-source kdab/tap_testing/kdsoap-qt6
-          brew reinstall --build-from-source kdab/tap_testing/kdreports-qt5
           brew reinstall --build-from-source kdab/tap_testing/kdreports-qt6
-          brew reinstall --build-from-source kdab/tap_testing/kdsingleapplication-qt5
           brew reinstall --build-from-source kdab/tap_testing/kdsingleapplication-qt6
-          brew reinstall --build-from-source kdab/tap_testing/kddockwidgets-qt5
           brew reinstall --build-from-source kdab/tap_testing/kddockwidgets-qt6
-          brew reinstall --build-from-source kdab/tap_testing/gammaray-qt5
           brew reinstall --build-from-source kdab/tap_testing/kdbindings
           brew reinstall --build-from-source kdab/tap_testing/kdutils
           brew reinstall --build-from-source kdab/tap_testing/kdalgorithms
