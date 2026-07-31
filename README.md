@@ -5,7 +5,10 @@
 First add this tap to your homebrew using (you only need to do this
 once to initialize the tap):
 
-`brew tap KDAB/tap`
+```
+brew tap KDAB/tap
+brew trust kdab/tap
+````
 
 Then install a formula using
 

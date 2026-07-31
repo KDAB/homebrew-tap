@@ -32,6 +32,7 @@ jobs:
       - name: Brew install
         run: |
           brew tap kdab/tap_testing ${PWD}
+          brew trust kdab/tap_testing
           brew reinstall --build-from-source kdab/tap_testing/kdstatemachineeditor-qt6
           brew reinstall --build-from-source kdab/tap_testing/kdsoap-qt6
           brew reinstall --build-from-source kdab/tap_testing/kdreports-qt6
