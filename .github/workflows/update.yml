@@ -25,6 +25,7 @@ jobs:
       - name: Update
         run: |
           brew tap kdab/tap_testing ${PWD}
+          brew trust kdab/tap_testing
           ./update_all.py
         env:
           GH_TOKEN: ${{ github.token }}
