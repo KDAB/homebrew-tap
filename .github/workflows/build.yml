@@ -17,8 +17,8 @@ jobs:
       fail-fast: true
       matrix:
         os:
-          - macos-14
           - macos-15
+          - macos-26
 
     steps:
       - name: Checkout sources
